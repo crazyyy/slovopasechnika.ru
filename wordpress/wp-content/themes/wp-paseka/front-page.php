@@ -15,7 +15,7 @@
             добрые
             <br> пасечники
           </div>
-          <a class="_mult" href="http://slovopasechnika.ru/#" data-modal="etic-bee">
+          <a class="_mult" href="#" data-modal="etic-bee">
             <div class="how-we-do-block1__absolute-element-4">
               этичное
               <br>пчеловодство
@@ -180,39 +180,39 @@
           <div class="proposion-item">
             <p class="proposion-item-title">Разнотравье Алтая</p>
             <div class="proposion-item-block">
-              <a href="http://slovopasechnika.ru/#" data-modal="detail-altay"><img src="<?php echo get_template_directory_uri(); ?>/img/banka_altay.png"></a>
+              <a href="#" data-modal="detail-altay"><img src="<?php echo get_template_directory_uri(); ?>/img/banka_altay.png"></a>
               <div class="proposion-item-block-price">
                 <span>542 рублей</span>
               </div>
             </div>
             <div class="proposion-item-block-buttons">
-              <a href="http://slovopasechnika.ru/#" data-modal="detail-altay" class="detail active-element">Подробнее</a>
+              <a href="#" data-modal="detail-altay" class="detail active-element">Подробнее</a>
               <a href="http://slovopasechnika.ru/cart/altay" class="buy active-element">Купить</a>
             </div>
           </div>
           <div class="proposion-item">
             <p class="proposion-item-title">Алтайская гречиха</p>
             <div class="proposion-item-block">
-              <a href="http://slovopasechnika.ru/#" data-modal="detail-grech"><img src="<?php echo get_template_directory_uri(); ?>/img/banka_grech.png"></a>
+              <a href="#" data-modal="detail-grech"><img src="<?php echo get_template_directory_uri(); ?>/img/banka_grech.png"></a>
               <div class="proposion-item-block-price">
                 <span>610 рублей</span>
               </div>
             </div>
             <div class="proposion-item-block-buttons">
-              <a href="http://slovopasechnika.ru/#" data-modal="detail-grech" class="detail active-element">Подробнее</a>
+              <a href="#" data-modal="detail-grech" class="detail active-element">Подробнее</a>
               <a href="http://slovopasechnika.ru/cart/grech" class="buy active-element">Купить</a>
             </div>
           </div>
           <div class="proposion-item">
             <p class="proposion-item-title">Алтайский дягиль</p>
             <div class="proposion-item-block">
-              <a href="http://slovopasechnika.ru/#" data-modal="detail-dyagil"><img src="<?php echo get_template_directory_uri(); ?>/img/banka_dyagil.png"></a>
+              <a href="#" data-modal="detail-dyagil"><img src="<?php echo get_template_directory_uri(); ?>/img/banka_dyagil.png"></a>
               <div class="proposion-item-block-price">
                 <span>754 рублей</span>
               </div>
             </div>
             <div class="proposion-item-block-buttons">
-              <a href="http://slovopasechnika.ru/#" data-modal="detail-dyagil" class="detail active-element">Подробнее</a>
+              <a href="#" data-modal="detail-dyagil" class="detail active-element">Подробнее</a>
               <a href="http://slovopasechnika.ru/cart/dyagil" class="buy active-element">Купить</a>
             </div>
           </div>
@@ -246,7 +246,7 @@
               <p>
                 И поэтому мы решили, что вы должны знать о вреде веществ, которые выделяются в нагретом мёде свыше 40°С при промышленном производстве. Это метилфурфураль и другие вещества. Опасность в том, что большинство мёда на полках магазинов нагреты.
               </p>
-              <a class="active-element" href="http://slovopasechnika.ru/#" data-modal="subscribe">Как отличить нагретый мёд в магазине?</a>
+              <a class="active-element" href="#" data-modal="subscribe">Как отличить нагретый мёд в магазине?</a>
             </div>
           </div>
         </div>
@@ -277,7 +277,7 @@
               <p>
                 2 чайные ложки меда разотрите с 1 столовой ложкой творога. Добавьте еще 2 ст. ложки теплого молока. Все тщательно размешайте и наложите массу на лицо. По истечении 10-12-ти минут снимите ватным тампоном, смоченным в теплой воде. Не добавляйте мёд в нагретый чай, лучше ешьте «вприкуску». Мёд должен нести только пользу!
               </p>
-              <a class="active-element" href="http://slovopasechnika.ru/#" data-modal="subscribe">Получите косметические рецепты нашего дерматолога</a>
+              <a class="active-element" href="#" data-modal="subscribe">Получите косметические рецепты нашего дерматолога</a>
             </div>
           </div>
         </div>
@@ -299,7 +299,7 @@
               <p>
                 Помните, что натуральный мёд имеет к себе некоторые требования. Самое первое и важное, это то, что его нельзя нагревать свыше 40°C градусов, потому что он теряет большинство своих полезных составлящих. Следующее важное требование - употреблять в пищу для максимальной пользы организму нужно только натуральный мёд. Искусственный мёд не имеет чудодейственной силы.
               </p>
-              <a class="active-element" href="http://slovopasechnika.ru/#" data-modal="subscribe" style="text-align: center;">Получить следующий совет</a>
+              <a class="active-element" href="#" data-modal="subscribe" style="text-align: center;">Получить следующий совет</a>
             </div>
           </div>
         </div>
@@ -328,7 +328,7 @@
               <p>
                 Есть свидетельства, что такой способ применялся славянами, китайцами, индийцами, римлянами, греками с древних времен.
               </p>
-              <a class="active-element" href="http://slovopasechnika.ru/#" data-modal="subscribe">Получите косметические рецепты нашего дерматолога</a>
+              <a class="active-element" href="#" data-modal="subscribe">Получите косметические рецепты нашего дерматолога</a>
             </div>
           </div>
         </div>
@@ -353,24 +353,23 @@
     <br>
     <div class="at-home">
       <div class="at-home-wrapper">
-        <div class="at-home-title">
-          Применение баночки дома
-        </div>
+        <div class="at-home-title">Применение баночки дома</div>
         <div class="at-home-block">
+
           <div class="imgs">
-            <div class="thumb"><img src="<?php echo get_template_directory_uri(); ?>/img/at_home_1.jpg"></div>
-            <div class="thumb"><img src="<?php echo get_template_directory_uri(); ?>/img/at_home_2.jpg"></div>
-            <div class="thumb"><img src="<?php echo get_template_directory_uri(); ?>/img/at_home_3.jpg"></div>
-            <div class="thumb"><img src="<?php echo get_template_directory_uri(); ?>/img/at_home_4.jpg"></div>
-            <div class="thumb"><img src="<?php echo get_template_directory_uri(); ?>/img/at_home_5.jpg"></div>
-            <div class="thumb"><img src="<?php echo get_template_directory_uri(); ?>/img/at_home_6.jpg"></div>
+            <?php if( have_rows('gallery') ): while ( have_rows('gallery') ) : the_row(); ?>
+              <?php $image = get_sub_field('image'); if( !empty($image) ): ?>
+                <div class="thumb"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></div>
+              <?php endif; ?>
+            <?php endwhile; endif; ?>
           </div>
+
           <div class="text">
-            Придумали другое интересное применение баночки? Выкладывайте в свой инстаграм
-            <br>с хештегом
-            <span class="bold" style="background-color: #D7E269;">#slovopasechnika</span>
-            <br> Лучшие идеи добавим на сайт и подарим ЯЩИК баночек!
+            <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+              <?php the_content(); ?>
+            <?php endwhile; endif; ?>
           </div>
+
         </div>
       </div>
       <!--//at-home-wrapper-->
@@ -386,7 +385,7 @@
           </div>
           <div class="right">
             <p>+7(812)407-11-43</p>
-            <a class="active-element" href="http://slovopasechnika.ru/#" data-modal="call-me">Заказать обратный звонок</a>
+            <a class="active-element" href="#" data-modal="call-me">Заказать обратный звонок</a>
           </div>
         </div>
         <span class="line"></span>
@@ -395,69 +394,26 @@
     <!--//questions-->
     <div class="videos">
       <div class="videos-wrapper">
-        <div class="videos-title">
-          Изменим мир вместе!
-        </div>
-
+        <div class="videos-title">Изменим мир вместе!</div>
         <div class="videos-block">
           <a class="active-element" href="http://slovopasechnika.ru/cart">Перейти к покупке</a>
-          <p>
-            Расскажите нам про свои идеи замены пластика и стекла
-            <br>
-            <span class="bold">idea@slovopasechnika.ru</span>
-          </p>
+          <p>Расскажите нам про свои идеи замены пластика и стекла<br><span class="bold">idea@slovopasechnika.ru</span></p>
         </div>
       </div>
       <!--//videos-->
 
       <div id="owl-demo" class="owl-carousel owl-theme true-highlight">
-        <div class="reviews-block-item">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/Lena.png">
-          <div class="reviews-block-item-text">
-            <p class="reviews-block-item-text-title">Elena Kalinyak (Kiseleva)</p>
-            <p>
-              Ураааааа !!!!! Так хотелось мне эту восхитительную баночку, и чудо случилось!
-              <br> Ура-ура-ура !!! Спасибо огромное до небес
-            </p>
+        <?php if( have_rows('reviews') ): while ( have_rows('reviews') ) : the_row(); ?>
+          <div class="reviews-block-item">
+            <?php $image = get_sub_field('author_photo'); if( !empty($image) ): ?>
+              <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+            <?php endif; ?>
+            <div class="reviews-block-item-text">
+              <p class="reviews-block-item-text-title"><?php the_sub_field('author_name'); ?></p>
+              <?php the_sub_field('review_body'); ?>
+            </div>
           </div>
-        </div>
-        <div class="reviews-block-item">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/nadya.png">
-          <div class="reviews-block-item-text">
-            <p class="reviews-block-item-text-title">Надежда Королева</p>
-            <p>
-              Господи! Вселенная слышит ! Ура! Спасибо вам ребята! Вы просто воплотили мечту-спасение
-              <br> от боли за утопающие в пластике человечество!
-            </p>
-          </div>
-        </div>
-        <div class="reviews-block-item">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/polina.png">
-          <div class="reviews-block-item-text">
-            <p class="reviews-block-item-text-title">Полина Дудникова</p>
-            <p>
-              Удачи в процессе, успеха в результате!=)
-              <br> Я вчера, наконец, добралась до баночки с мёдом. У вас очень, очень, оооочень вкусный мёд!!!
-              <br> (а уж я в мёде разбираюсь, ем каждый день и много)))
-              <br> И восковая эко-баночка волшебно пахнет. Спасибо
-            </p>
-          </div>
-        </div>
-        <div class="reviews-block-item">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/Regina.png">
-          <div class="reviews-block-item-text">
-            <p class="reviews-block-item-text-title">Регина Иващенко</p>
-            <p>
-              Надумала я тут заболеть, а меня решили полечить) и подарили мёд.
-              <br> А мёд оказался не простой, Лежит он в 100% банке восковой!
-              <br> Баночка красивая, маленькая, милая,Очень ароматная и натуральная! Биоразлагаема, в быту
-              <br> всегда полезная,И мёд в ней супер-вкусный! Спасибо Вам, друзья!
-              <br> Придумали Вы баночку, которую так хочется держать в руках и согревать и мёд из неё есть.
-              <br> Проект Ваш просто суперский, другого и не хочется,
-              <br> Вселенной всей так нравится и плюсов уж не счесть!
-            </p>
-          </div>
-        </div>
+        <?php endwhile; endif; ?>
       </div>
     </div>
   </div>

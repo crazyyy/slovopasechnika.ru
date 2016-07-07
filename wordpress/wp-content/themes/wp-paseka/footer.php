@@ -46,7 +46,7 @@
       </p>
       <input class="_super_call_email" type="text">
     </div>
-    <div class="call-me__button"><a class="active-element _super_call" href="http://slovopasechnika.ru/#">Отправить</a></div>
+    <div class="call-me__button"><a class="active-element _super_call" href="#">Отправить</a></div>
   </div>
   <div class="modal-window" id="wooden-buy" style="display: none;">
     <p class="call-me__title">Подарочная эко-баночка с Алтайским мёдом (325 гр) в дереве + одна мини баночка для вас (50 гр)</p>
@@ -60,7 +60,7 @@
       </p>
       <input class="_wooden_call_email" type="text">
     </div>
-    <div class="call-me__button"><a class="active-element _wooden_call" href="http://slovopasechnika.ru/#">Отправить</a></div>
+    <div class="call-me__button"><a class="active-element _wooden_call" href="#">Отправить</a></div>
   </div>
   <div class="modal-window" id="delivery" style="display: none;">
     <div class="opt-general">
@@ -85,7 +85,7 @@
           </div>
           <div class="opt-general__opt-detail__central-content-right">
             <p>+7(812)407-11-43</p>
-            <a class="active-element opt-general__opt-detail__central-content-right__active-element" href="http://slovopasechnika.ru/#" data-modal="call-me" onclick="jmodal:close">Заказать обратный звонок</a>
+            <a class="active-element opt-general__opt-detail__central-content-right__active-element" href="#" data-modal="call-me" onclick="jmodal:close">Заказать обратный звонок</a>
           </div>
         </div>
         <span class="opt-general__opt-detail__line" style="margin-bottom: 0; margin-top: 18px;"></span>
@@ -121,7 +121,7 @@
           </div>
           <div class="opt-general__opt-detail__central-content-right">
             <p>+7(812)407-11-43</p>
-            <a class="active-element opt-general__opt-detail__central-content-right__active-element" href="http://slovopasechnika.ru/#" data-modal="call-me" onclick="jmodal:close">Заказать обратный звонок</a>
+            <a class="active-element opt-general__opt-detail__central-content-right__active-element" href="#" data-modal="call-me" onclick="jmodal:close">Заказать обратный звонок</a>
           </div>
         </div>
         <span class="opt-general__opt-detail__line" style="margin-bottom: 0; margin-top: 18px;"></span>
@@ -145,7 +145,7 @@
           </div>
           <div class="opt-general__opt-detail__central-content-right">
             <p>+7(812)407-11-43</p>
-            <a class="active-element opt-general__opt-detail__central-content-right__active-element" href="http://slovopasechnika.ru/#" data-modal="call-me" onclick="jmodal:close">Заказать обратный звонок</a>
+            <a class="active-element opt-general__opt-detail__central-content-right__active-element" href="#" data-modal="call-me" onclick="jmodal:close">Заказать обратный звонок</a>
           </div>
         </div>
         <span class="opt-general__opt-detail__line" style="margin-bottom: 0; margin-top: 18px;"></span>
@@ -160,7 +160,7 @@
       </p>
       <input type="text" class="checkbox" id="phones_0" placeholder="+7 (   )">
     </div>
-    <div class="call-me__button"><a class="_call_me_send active-element" href="http://slovopasechnika.ru/#">Отправить</a></div>
+    <div class="call-me__button"><a class="_call_me_send active-element" href="#">Отправить</a></div>
   </div>
   <div class="modal-window" id="video-how-we-do" style="display: none;">
   </div>
@@ -343,7 +343,7 @@
           <input class="_subscribe_text" placeholder="e-mail" type="text">
         </div>
         <div class="active-element subscr-general__detail-submit">
-          <a class="_subscribe_link" href="http://slovopasechnika.ru/#">узнать</a>
+          <a class="_subscribe_link" href="#">узнать</a>
         </div>
       </div>
     </div>
@@ -353,7 +353,7 @@
       <img src="<?php echo get_template_directory_uri(); ?>/img/letter_img.png">
       <div class="modal-letter-top-bottom">
         <input class="_letter_top_email" placeholder="e-mail" type="text">
-        <a class="_letter_top_link" href="http://slovopasechnika.ru/#">Оставить заявку</a>
+        <a class="_letter_top_link" href="#">Оставить заявку</a>
       </div>
     </div>
   </div>
@@ -370,51 +370,12 @@
     <div class="thanks-wrapper">
       <p>Спасибо за заказ. Наш менеджер свяжется с вами в ближайшее время.</p>
       <div class="thanks-bottom">
-        <a class="active-element" href="http://slovopasechnika.ru/#" onclick="$.jmodal.close();">Спасибо</a>
+        <a class="active-element" href="#" onclick="$.jmodal.close();">Спасибо</a>
       </div>
     </div>
   </div>
-  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/owl.carousel.min.js"></script>
-  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.jmodal.js"></script>
-  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/imagesloaded.pkgd.js"></script>
-  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery-photo-enlarger.js"></script>
-  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/scroll.js"></script>
-  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
-  <script type="text/javascript">
-  /*<![CDATA[*/
 
-  if ($(window).width() >= 1024) {
-    var widthW = 900;
-  } else if ($(window).width() < 1024 && $(window).width() >= 700) {
-    var widthW = 700;
-  } else {
-    var widthW = 460;
-  }
-
-  jQuery(function($) {
-
-
-    $('#owl-demo').owlCarousel({
-      autoPlay: 5000,
-      navigation: true, // Show next and prev buttons
-      slideSpeed: 1000,
-      paginationSpeed: 500,
-      singleItem: true
-    });
-
-    $('#owl-demo2').owlCarousel({
-      // autoPlay: 5000,
-      navigation: true, // Show next and prev buttons
-      slideSpeed: 2000,
-      paginationSpeed: 1000,
-      singleItem: true
-
-    });
-
-  });
-  /*]]>*/
-  </script>
   <?php wp_footer(); ?>
+
 </body>
 </html>
