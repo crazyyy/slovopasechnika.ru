@@ -37,13 +37,9 @@
   <div class="modal-window" id="super" style="display: none;">
     <p class="call-me__title">3 баночки крутого мёда + супербаночка в подарок и бесплатная доставка!</p>
     <div class="call-me__phone-block">
-      <p class="call-me__phone-block-title">
-        Ваш телефон:
-      </p>
+      <p class="call-me__phone-block-title">Ваш телефон:</p>
       <input type="text" class="checkbox" id="phones_1" placeholder="+7 (   )">
-      <p class="call-me__phone-block-title">
-        Ваш email:
-      </p>
+      <p class="call-me__phone-block-title">Ваш email:</p>
       <input class="_super_call_email" type="text">
     </div>
     <div class="call-me__button"><a class="active-element _super_call" href="#">Отправить</a></div>
@@ -51,13 +47,9 @@
   <div class="modal-window" id="wooden-buy" style="display: none;">
     <p class="call-me__title">Подарочная эко-баночка с Алтайским мёдом (325 гр) в дереве + одна мини баночка для вас (50 гр)</p>
     <div class="call-me__phone-block">
-      <p class="call-me__phone-block-title">
-        Ваш телефон:
-      </p>
+      <p class="call-me__phone-block-title">Ваш телефон:</p>
       <input type="text" class="checkbox" id="phones_2" placeholder="+7 (   )">
-      <p class="call-me__phone-block-title">
-        Ваш email:
-      </p>
+      <p class="call-me__phone-block-title">Ваш email:</p>
       <input class="_wooden_call_email" type="text">
     </div>
     <div class="call-me__button"><a class="active-element _wooden_call" href="#">Отправить</a></div>
@@ -65,17 +57,13 @@
   <div class="modal-window" id="delivery" style="display: none;">
     <div class="opt-general">
       <div class="opt-general__opt-detail">
-        <p class="opt-general__opt-detail__p1">
-          Осуществляется по всем городам России, странам СНГ и Европы.
-        </p>
+        <p class="opt-general__opt-detail__p1">Осуществляется по всем городам России, странам СНГ и Европы.</p>
         <ul class="opt-general__opt-detail__sell">
           <li><span>1. </span>Курьером до Вашего адреса.</li>
           <li><span>2. </span>До пункта выдачи в Вашем городе.</li>
           <li><span>3. </span>Пункт самовывоза в городе Санкт-Петербург.</li>
         </ul>
-        <p class="opt-general__opt-detail__p2">
-          по адресу ул. Гельсингфорсская дом 3. Станция метро Лесная
-          <br> Офис находится на территории завода «Красная Нить»
+        <p class="opt-general__opt-detail__p2">по адресу ул. Гельсингфорсская дом 3. Станция метро Лесная<br> Офис находится на территории завода «Красная Нить»
         </p>
         <span class="opt-general__opt-detail__line" style="margin-bottom: 8px;"></span>
         <div class="opt-general__opt-detail__central-content">
@@ -128,8 +116,7 @@
       </div>
     </div>
   </div>
-  <div class="modal-window" id="menu-video" style="display: none;">
-  </div>
+
   <div class="modal-window" id="contacts" style="display: none;">
     <div class="opt-general">
       <div class="opt-general__opt-detail">
@@ -155,137 +142,44 @@
   <div class="modal-window" id="call-me" style="display: none;">
     <p class="call-me__title">Заказать обратный звонок</p>
     <div class="call-me__phone-block">
-      <p class="call-me__phone-block-title">
-        Номер телефона:
-      </p>
+      <p class="call-me__phone-block-title">Номер телефона:</p>
       <input type="text" class="checkbox" id="phones_0" placeholder="+7 (   )">
     </div>
     <div class="call-me__button"><a class="_call_me_send active-element" href="#">Отправить</a></div>
   </div>
-  <div class="modal-window" id="video-how-we-do" style="display: none;">
-  </div>
-  <div class="modal-window" id="detail-altay" style="display: none;">
-    <div class="altay-detail__left-colunm">
-      <div class="altay-detail__left-colunm__big-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/detail1_big.jpg" alt="">
-      </div>
-      <div class="altay-detail__left-colunm__small-img">
-        <div class="altay-detail__left-colunm__small-img-first">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/detail1.jpg" alt="">
+
+  <?php $postes = get_field('top_products', 22); if( $postes ): ?>
+    <?php foreach( $postes as $p ): ?>
+    <?php $thisID = $p->ID; ?>
+
+      <div class="modal-window" id="product-<?php echo $thisID; ?>" style="display: none;">
+        <div class="altay-detail__left-colunm">
+          <div class="altay-detail__left-colunm__big-img">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/detail1_big.jpg" alt="">
+          </div>
+          <div class="altay-detail__left-colunm__small-img">
+            <?php if( have_rows('gallery', $thisID) ): while ( have_rows('gallery', $thisID ) ) : the_row(); ?>
+              <?php $image = get_sub_field('image'); if( !empty($image) ): ?>
+                <div class="altay-detail__left-colunm__small-img__div">
+                  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                </div>
+              <?php endif; ?>
+            <?php endwhile; endif; ?>
+          </div>
         </div>
-        <div class="altay-detail__left-colunm__small-img__div">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/detail2.jpg" alt="">
-        </div>
-        <div class="altay-detail__left-colunm__small-img__div">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/detail3.jpg" alt="">
-        </div>
-        <div class="altay-detail__left-colunm__small-img__div">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/detail4.jpg" alt="">
-        </div>
-        <div class="altay-detail__left-colunm__small-img__div">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/detail5.jpg" alt="">
-        </div>
-        <div class="altay-detail__left-colunm__small-img-last">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/detail6.jpg" alt="">
-        </div>
-      </div>
-    </div>
-    <div class="altay-detail__right-colunm">
-      <p class="altay-detail__right-colunm__p1">
-        <span>Алтайский мёд</span> золотисто-желтого, иногда желто-коричневого цвета, с приятным ароматом, насыщенным вкусом. Кристаллизо-
-        <br>ван c мелкой грануляцией.
-      </p>
-      <p class="altay-detail__right-colunm__p2">
-        Популярность этого мёда среди истинных ценителей является очень высокой.
-      </p>
-      <p class="altay-detail__right-colunm__p3">
-        Сбор нектара производится во время цветения диких и сеяных трав. В составе лугового мёда содержится нектар различных полевых трав (чабрец, клевер, люцерна, шалфей, окопник, осот, донник, пустырник, фацелия, синяк и др. луговое разнотравье). Важно отметить, что в составе мёда довольно много пыльцы, что делает его вкус немного необычным и в то же время весьма приятным.
-      </p>
-      <a class="active-element" href="http://slovopasechnika.ru/cart/altay">Купить</a>
-      <div class="altay-detail__right-colunm__bee">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/bee_altay.png" alt="">
-      </div>
-    </div>
-  </div>
-  <div class="modal-window" id="detail-grech" style="display: none;">
-    <div class="grech-detail__left-colunm">
-      <div class="grech-detail__left-colunm__big-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/detail1_big.jpg" alt="">
-      </div>
-      <div class="grech-detail__left-colunm__small-img">
-        <div class="grech-detail__left-colunm__small-img-first">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/detail1.jpg" alt="">
-        </div>
-        <div class="grech-detail__left-colunm__small-img__div">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/detail2.jpg" alt="">
-        </div>
-        <div class="grech-detail__left-colunm__small-img__div">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/detail3.jpg" alt="">
-        </div>
-        <div class="grech-detail__left-colunm__small-img__div">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/detail4.jpg" alt="">
-        </div>
-        <div class="grech-detail__left-colunm__small-img__div">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/detail5.jpg" alt="">
-        </div>
-        <div class="grech-detail__left-colunm__small-img-last">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/detail6.jpg" alt="">
+        <div class="altay-detail__right-colunm">
+          <?php echo get_post_field('post_content', $p->ID); ?>
+          <a class="active-element" href="<?php echo home_url(); ?>/cart.htm">Купить</a>
+          <div class="altay-detail__right-colunm__bee">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/bee_altay.png" alt="">
+          </div>
         </div>
       </div>
-    </div>
-    <div class="grech-detail__right-colunm">
-      <p class="grech-detail__right-colunm__p1">
-        О пользе <span>гречишного меда</span> сказано очень много. Полезные свойства гречишного меда описаны во многих учебниках.&nbsp; Такой мед убивает бактерии,&nbsp; поэтому его с успехом используют как консервант естественного происхождения.
-        <br> Фармакологические свойства
-        <br> Фармакологические свойства гречишного меда&nbsp; заключаются в отличных способностях вести борьбу с простудой.&nbsp; Как&nbsp; предмет фармакологии, гречишный мед&nbsp; своими свойствами&nbsp; поможет побороть грипп,&nbsp; восстановит&nbsp; защитные силы организма, повысит иммунитет организма.
-        <br> В области косметологии
-        <br> Чем полезен гречишный мед еще?&nbsp; Лечебные свойства гречишного меда широко используются и в области косметологии.&nbsp;Гречишный мёд отличный косметолог.&nbsp;
-      </p>
-      <a class="active-element" href="http://slovopasechnika.ru/cart/grech">Купить</a>
-      <div class="grech-detail__right-colunm__bee">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/bee_grech.png" alt="">
-      </div>
-    </div>
-  </div>
-  <div class="modal-window" id="detail-dyagil" style="display: none;">
-    <div class="dyagil-detail__left-colunm">
-      <div class="dyagil-detail__left-colunm__big-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/detail1_big.jpg" alt="">
-      </div>
-      <div class="dyagil-detail__left-colunm__small-img">
-        <div class="dyagil-detail__left-colunm__small-img-first">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/detail1.jpg" alt="">
-        </div>
-        <div class="dyagil-detail__left-colunm__small-img__div">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/detail2.jpg" alt="">
-        </div>
-        <div class="dyagil-detail__left-colunm__small-img__div">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/detail3.jpg" alt="">
-        </div>
-        <div class="dyagil-detail__left-colunm__small-img__div">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/detail4.jpg" alt="">
-        </div>
-        <div class="dyagil-detail__left-colunm__small-img__div">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/detail5.jpg" alt="">
-        </div>
-        <div class="dyagil-detail__left-colunm__small-img-last">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/detail6.jpg" alt="">
-        </div>
-      </div>
-    </div>
-    <div class="dyagil-detail__right-colunm">
-      <p class="dyagil-detail__right-colunm__p1">
-        <span>Дягилевый мед</span> - довольно редкий сорт меда. Вообще, дягиль - это медоносное растение, которое символизирует здоровье, мощь и силу. Наверно, очень мало растений, с которыми связано столько легенд. В отличие от большинства растений, о дягиле ничего не знали в древние века, он не привлекал к себе внимания до 15 столетия, когда впервые появился в европейских травниках. Вот тогда и появилась первая легенда, связанная с его названием.
-      </p>
-      <p class="dyagil-detail__right-colunm__p2">
-        Родовое название произошло от латинского слова angelus (божий вестник). Предание рассказывает, что на лекарственные свойства этого растения указал ангел, которого иногда отождествляют с архангелом Михаилом, не зря же он зацветает 8 мая, на день святого архангела. Согласно легенде, он во время эпидемии чумы указал монахам корни какого растения жевать, чтобы не заболеть.
-      </p>
-      <a class="active-element" href="http://slovopasechnika.ru/cart/dyagil">Купить</a>
-      <div class="dyagil-detail__right-colunm__bee">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/bee_dyagil.png" alt="">
-      </div>
-    </div>
-  </div>
+
+    <?php endforeach; ?>
+  <?php endif; ?>
+
+
   <div class="modal-window" id="etic-bee" style="display: none;">
     <div id="owl-demo2" class="owl-carousel owl-theme true-highlight">
       <div class="reviews-block-item">
@@ -361,7 +255,7 @@
     <div class="letter-top-wrapper">
       <img src="<?php echo get_template_directory_uri(); ?>/img/letter_img.png">
       <div class="modal-letter-top-bottom">
-        <a class="active-element" href="http://slovopasechnika.ru/cart">Купить</a>
+        <a class="active-element" href="<?php echo home_url(); ?>/cart.htm">Купить</a>
       </div>
     </div>
   </div>

@@ -7,42 +7,24 @@
           <p>Разработка специалистов-пчеловодов «Слово пасечника» </p>
         </div>
         <div class="how-we-do-block1">
-          <div class="how-we-do-block1__absolute-element-1">
-            Сота
-          </div>
+          <div class="how-we-do-block1__absolute-element-1">Сота</div>
           <div class="how-we-do-block1__absolute-element-2"></div>
-          <div class="how-we-do-block1__absolute-element-3">
-            добрые
-            <br> пасечники
-          </div>
+          <div class="how-we-do-block1__absolute-element-3">добрые<br> пасечники</div>
           <a class="_mult" href="#" data-modal="etic-bee">
-            <div class="how-we-do-block1__absolute-element-4">
-              этичное
-              <br>пчеловодство
-            </div>
+            <div class="how-we-do-block1__absolute-element-4">этичное<br>пчеловодство</div>
             <div class="how-we-do-block1__absolute-element-4-q">
               <span>посмотреть мультик</span>
             </div>
           </a>
           <div class="how-we-do-block1__absolute-element-5"></div>
           <div class="how-we-do-block1__absolute-element-6"></div>
-          <div class="how-we-do-block1__absolute-element-7">
-            Воск
-          </div>
+          <div class="how-we-do-block1__absolute-element-7">Воск</div>
           <div class="how-we-do-block1__absolute-element-8"></div>
-          <div class="how-we-do-block1__absolute-element-9">
-            Мёд
-          </div>
+          <div class="how-we-do-block1__absolute-element-9">Мёд</div>
           <div class="how-we-do-block1__absolute-element-10"></div>
           <div class="how-we-do-block1__absolute-element-11"></div>
-          <div class="how-we-do-block1__absolute-element-12">
-            изготовлено
-            <br>вручную
-          </div>
-          <div class="how-we-do-block1__absolute-element-13">
-            фасовка
-            <br>без нагрева
-          </div>
+          <div class="how-we-do-block1__absolute-element-12">изготовлено<br>вручную</div>
+          <div class="how-we-do-block1__absolute-element-13">фасовка<br>без нагрева</div>
         </div>
         <!--//how-we-do-block1-->
         <p class="line-text-center max-width">100% упаковка из воска с мёдом</p>
@@ -104,10 +86,7 @@
                 придаёт неповторимый
                 <br>вкус и аромат
               </p>
-              <p class="how-we-do-block2__right-column-line3">
-                невероятно приятная
-                <br>на ощупь
-              </p>
+              <p class="how-we-do-block2__right-column-line3">невероятно приятная<br>на ощупь</p>
             </div>
           </div>
         </div>
@@ -122,48 +101,30 @@
             <div></div>
           </div>
           <div class="how-we-do-block3-line3">
-            <p class="first">
-              Основной показатель <span class="bold">натуральности</span> и <span class="bold">зрелости мёда</span> - диастазное число.*
-            </p>
-            <p class="second">
-              *Чем выше этот показатель, тем лучше продукт.
-            </p>
+            <p class="first">Основной показатель <span class="bold">натуральности</span> и <span class="bold">зрелости мёда</span> - диастазное число.*</p>
+            <p class="second">*Чем выше этот показатель, тем лучше продукт.</p>
           </div>
         </div>
         <!--//how-we-do-block3-->
         <div class="how-we-do-block4">
           <div class="how-we-do-block4__left-column">
-            <p class="first">
-              Большинство мёда в магазине
-            </p>
-            <p class="second">
-              Слово Пасечника
-            </p>
+            <p class="first">Большинство мёда в магазине</p>
+            <p class="second">Слово Пасечника</p>
           </div>
           <div class="how-we-do-block4__central-img">
           </div>
           <div class="how-we-do-block4__right-column">
             <div class="how-we-do-block4__right-column-top">
               <ul>
-                <li>
-                  • сладкий сироп со вкусом мёда
-                </li>
+                <li>• сладкий сироп со вкусом мёда</li>
               </ul>
             </div>
             <div class="how-we-do-block4__right-column-bottom">
               <ul>
-                <li>
-                  • лечебные свойства;
-                </li>
-                <li>
-                  • косметический эффект;
-                </li>
-                <li>
-                  • натуральный и зрелый мёд;
-                </li>
-                <li>
-                  • мягкая защита от стресса.
-                </li>
+                <li>• лечебные свойства;</li>
+                <li>• косметический эффект;</li>
+                <li>• натуральный и зрелый мёд;</li>
+                <li>• мягкая защита от стресса.</li>
               </ul>
             </div>
           </div>
@@ -177,45 +138,25 @@
       <div class="proposion-wrapper">
         <p class="proposion-title">Наше предложение</p>
         <div class="proposion-block">
-          <div class="proposion-item">
-            <p class="proposion-item-title">Разнотравье Алтая</p>
-            <div class="proposion-item-block">
-              <a href="#" data-modal="detail-altay"><img src="<?php echo get_template_directory_uri(); ?>/img/banka_altay.png"></a>
-              <div class="proposion-item-block-price">
-                <span>542 рублей</span>
+          <?php $postes = get_field('top_products'); if( $postes ): ?>
+            <?php foreach( $postes as $p ): ?>
+              <div class="proposion-item">
+                <p class="proposion-item-title"><?php echo get_the_title( $p->ID ); ?></p>
+                <div class="proposion-item-block">
+                  <a href="#" data-modal="product-<?php echo $p->ID; ?>">
+                    <?php echo get_the_post_thumbnail( $p->ID, 'full' ); ?>
+                  </a>
+                  <div class="proposion-item-block-price">
+                    <span><?php the_field('price', $p->ID); ?> €</span>
+                  </div>
+                </div>
+                <div class="proposion-item-block-buttons">
+                  <a href="#" data-modal="product-<?php echo $p->ID; ?>" class="detail active-element">Подробнее</a>
+                  <a href="<?php echo home_url(); ?>/cart.htm/product-<?php echo $p->ID; ?>" class="buy active-element">Купить</a>
+                </div>
               </div>
-            </div>
-            <div class="proposion-item-block-buttons">
-              <a href="#" data-modal="detail-altay" class="detail active-element">Подробнее</a>
-              <a href="http://slovopasechnika.ru/cart/altay" class="buy active-element">Купить</a>
-            </div>
-          </div>
-          <div class="proposion-item">
-            <p class="proposion-item-title">Алтайская гречиха</p>
-            <div class="proposion-item-block">
-              <a href="#" data-modal="detail-grech"><img src="<?php echo get_template_directory_uri(); ?>/img/banka_grech.png"></a>
-              <div class="proposion-item-block-price">
-                <span>610 рублей</span>
-              </div>
-            </div>
-            <div class="proposion-item-block-buttons">
-              <a href="#" data-modal="detail-grech" class="detail active-element">Подробнее</a>
-              <a href="http://slovopasechnika.ru/cart/grech" class="buy active-element">Купить</a>
-            </div>
-          </div>
-          <div class="proposion-item">
-            <p class="proposion-item-title">Алтайский дягиль</p>
-            <div class="proposion-item-block">
-              <a href="#" data-modal="detail-dyagil"><img src="<?php echo get_template_directory_uri(); ?>/img/banka_dyagil.png"></a>
-              <div class="proposion-item-block-price">
-                <span>754 рублей</span>
-              </div>
-            </div>
-            <div class="proposion-item-block-buttons">
-              <a href="#" data-modal="detail-dyagil" class="detail active-element">Подробнее</a>
-              <a href="http://slovopasechnika.ru/cart/dyagil" class="buy active-element">Купить</a>
-            </div>
-          </div>
+            <?php endforeach; ?>
+          <?php endif; ?>
         </div>
       </div>
       <!--//proposion-wrapper-->
@@ -240,12 +181,8 @@
             <span class="line ver-line1"></span>
             <div class="properties-block__right-column_text-block">
               <p class="title">Совет!</p>
-              <p>
-                Не добавляйте мёд в нагретый чай, лучше ешьте «вприкуску». Мёд должен нести только пользу!
-              </p>
-              <p>
-                И поэтому мы решили, что вы должны знать о вреде веществ, которые выделяются в нагретом мёде свыше 40°С при промышленном производстве. Это метилфурфураль и другие вещества. Опасность в том, что большинство мёда на полках магазинов нагреты.
-              </p>
+              <p>Не добавляйте мёд в нагретый чай, лучше ешьте «вприкуску». Мёд должен нести только пользу!</p>
+              <p>И поэтому мы решили, что вы должны знать о вреде веществ, которые выделяются в нагретом мёде свыше 40°С при промышленном производстве. Это метилфурфураль и другие вещества. Опасность в том, что большинство мёда на полках магазинов нагреты.</p>
               <a class="active-element" href="#" data-modal="subscribe">Как отличить нагретый мёд в магазине?</a>
             </div>
           </div>
@@ -296,9 +233,7 @@
             <span class="line ver-line3"></span>
             <div class="properties-block__right-column_text-block">
               <p class="title">Совет!</p>
-              <p>
-                Помните, что натуральный мёд имеет к себе некоторые требования. Самое первое и важное, это то, что его нельзя нагревать свыше 40°C градусов, потому что он теряет большинство своих полезных составлящих. Следующее важное требование - употреблять в пищу для максимальной пользы организму нужно только натуральный мёд. Искусственный мёд не имеет чудодейственной силы.
-              </p>
+              <p>Помните, что натуральный мёд имеет к себе некоторые требования. Самое первое и важное, это то, что его нельзя нагревать свыше 40°C градусов, потому что он теряет большинство своих полезных составлящих. Следующее важное требование - употреблять в пищу для максимальной пользы организму нужно только натуральный мёд. Искусственный мёд не имеет чудодейственной силы.</p>
               <a class="active-element" href="#" data-modal="subscribe" style="text-align: center;">Получить следующий совет</a>
             </div>
           </div>
@@ -319,15 +254,9 @@
             <div class="properties-block__right-column_text-block">
               <p class="title" style="margin-bottom: 23px;">Личный совет, который применяет наша команда! </p>
               <p>Давно ли вы высыпались ? </p>
-              <p>
-                Попробуйте разводить 1 ст. ложку мёда в стакане тёплой воды и выпивать за 30-40 минут до отхода ко сну.
-              </p>
-              <p>
-                Откуда рецепт:
-              </p>
-              <p>
-                Есть свидетельства, что такой способ применялся славянами, китайцами, индийцами, римлянами, греками с древних времен.
-              </p>
+              <p>Попробуйте разводить 1 ст. ложку мёда в стакане тёплой воды и выпивать за 30-40 минут до отхода ко сну.</p>
+              <p>Откуда рецепт:</p>
+              <p>Есть свидетельства, что такой способ применялся славянами, китайцами, индийцами, римлянами, греками с древних времен.</p>
               <a class="active-element" href="#" data-modal="subscribe">Получите косметические рецепты нашего дерматолога</a>
             </div>
           </div>
@@ -396,7 +325,7 @@
       <div class="videos-wrapper">
         <div class="videos-title">Изменим мир вместе!</div>
         <div class="videos-block">
-          <a class="active-element" href="http://slovopasechnika.ru/cart">Перейти к покупке</a>
+          <a class="active-element" href="<?php echo home_url(); ?>/cart.htm">Перейти к покупке</a>
           <p>Расскажите нам про свои идеи замены пластика и стекла<br><span class="bold">idea@slovopasechnika.ru</span></p>
         </div>
       </div>

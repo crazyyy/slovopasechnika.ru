@@ -653,7 +653,6 @@ function disable_emojicons_tinymce( $plugins ) {
   }
 }
 
-
 // Add Autoren Post Type
 add_action( 'init', 'post_type_product' );
 function post_type_product() {
@@ -694,9 +693,6 @@ function post_type_product() {
 
   register_post_type( 'product' , $args );
 }
-
-
-
 
 
 ?>
