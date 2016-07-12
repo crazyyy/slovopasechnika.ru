@@ -32,33 +32,16 @@
         <div class="how-we-do-block2 max-width">
           <div class="how-we-do-block2-wrapper">
             <div class="how-we-do-block2__left-column">
-              <p class="how-we-do-block2__left-column-line1">
-                защищает
-                <br> от солнечных лучей,
-                <br> губительных для мёда
-              </p>
-              <p class="how-we-do-block2__left-column-line2">
-                безопасна
-                <br> для детей и животных
-              </p>
-              <p class="how-we-do-block2__left-column-line3">
-                придаёт неповторимый
-                <br>вкус и аромат
-              </p>
+              <p class="how-we-do-block2__left-column-line1">защищает<br> от солнечных лучей,<br> губительных для мёда</p>
+              <p class="how-we-do-block2__left-column-line2">безопасна<br> для детей и животных</p>
+              <p class="how-we-do-block2__left-column-line3">придаёт неповторимый<br>вкус и аромат</p>
             </div>
             <div class="how-we-do-block2__central-img">
             </div>
             <div class="how-we-do-block2__right-column">
-              <p class="how-we-do-block2__right-column-line1">
-                натуральный пчелиный воск
-              </p>
-              <p class="how-we-do-block2__right-column-line2">
-                родная для мёда среда
-              </p>
-              <p class="how-we-do-block2__right-column-line3">
-                невероятно приятная
-                <br>на ощупь
-              </p>
+              <p class="how-we-do-block2__right-column-line1">натуральный пчелиный воск</p>
+              <p class="how-we-do-block2__right-column-line2">родная для мёда среда</p>
+              <p class="how-we-do-block2__right-column-line3">невероятно приятная<br>на ощупь</p>
             </div>
           </div>
         </div>
@@ -68,24 +51,11 @@
             <div class="how-we-do-block2__central-img">
             </div>
             <div class="how-we-do-block2__right-column">
-              <p class="how-we-do-block2__left-column-line1">
-                защищает от солнечных лучей,
-                <br> губительных для мёда
-              </p>
-              <p class="how-we-do-block2__right-column-line1">
-                натуральный пчелиный
-              </p>
-              <p class="how-we-do-block2__right-column-line2">
-                родная для мёда среда
-              </p>
-              <p class="how-we-do-block2__left-column-line2">
-                безопасна для
-                <br> детей и животных
-              </p>
-              <p class="how-we-do-block2__left-column-line3">
-                придаёт неповторимый
-                <br>вкус и аромат
-              </p>
+              <p class="how-we-do-block2__left-column-line1">защищает от солнечных лучей,<br> губительных для мёда</p>
+              <p class="how-we-do-block2__right-column-line1">натуральный пчелиный</p>
+              <p class="how-we-do-block2__right-column-line2">родная для мёда среда</p>
+              <p class="how-we-do-block2__left-column-line2">безопасна для<br> детей и животных</p>
+              <p class="how-we-do-block2__left-column-line3">придаёт неповторимый<br>вкус и аромат</p>
               <p class="how-we-do-block2__right-column-line3">невероятно приятная<br>на ощупь</p>
             </div>
           </div>

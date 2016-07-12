@@ -11,7 +11,6 @@
             </ul>
           </div>
           <div class="cart-general__cart-block1">
-            <!-- <div class="disable"></div> -->
             <table class="cart-general__cart-block1__table">
               <tbody>
                 <tr>
@@ -25,60 +24,29 @@
                   <td class="cart-general__cart-block1__table__th__td4"> Количество баночек (по 3 в деревянной коробочке)</td>
                   <td class="cart-general__cart-block1__table__th__td6"></td>
                 </tr>
-                <tr class="cart-general__cart-block1__table__tr">
-                  <td class="cart-general__cart-block1__table__tr__td1"><span>Разнотравье Алтая, 325 гр</span></td>
-                  <td class="cart-general__cart-block1__table__tr__td2">
-                    x
-                    <input id="altay1" type="number" data-price="542" class="cart-general__cart-block1__table__imput" value=""> <span>по 542руб.</span>
-                  </td>
-                  <td class="cart-general__cart-block1__table__tr__td3">
-                    x
-                    <input id="altay2" type="number" data-price="998" class="cart-general__cart-block1__table__imput"> <span>по 998руб.</span>
-                  </td>
-                  <td class="cart-general__cart-block1__table__tr__td4">
-                    x
-                    <input id="altay3" type="number" data-price="2150" class="cart-general__cart-block1__table__imput"> <span>по 2150руб.</span>
-                  </td>
-                  <td class="cart-general__cart-block1__table__tr__td5">
-                    <img class="active-elevent _clear_cart_line" src="img/close_cart.png" alt="">
-                  </td>
-                </tr>
-                <tr class="cart-general__cart-block1__table__tr">
-                  <td class="cart-general__cart-block1__table__tr__td1"><span>Алтайская гречиха, 325 гр</span></td>
-                  <td class="cart-general__cart-block1__table__tr__td2">
-                    x
-                    <input id="grech1" type="number" data-price="610" class="cart-general__cart-block1__table__imput" value=""> <span>по 610руб.</span>
-                  </td>
-                  <td class="cart-general__cart-block1__table__tr__td3">
-                    x
-                    <input id="grech2" type="number" data-price="1074" class="cart-general__cart-block1__table__imput"> <span>по 1074руб.</span>
-                  </td>
-                  <td class="cart-general__cart-block1__table__tr__td4">
-                    x
-                    <input id="grech3" type="number" data-price="2354" class="cart-general__cart-block1__table__imput"> <span>по 2354руб.</span>
-                  </td>
-                  <td class="cart-general__cart-block1__table__tr__td5">
-                    <img class="active-elevent _clear_cart_line" src="img/close_cart.png" alt="">
-                  </td>
-                </tr>
-                <tr class="cart-general__cart-block1__table__tr">
-                  <td class="cart-general__cart-block1__table__tr__td1"><span>Алтайский дягиль, 325 гр</span></td>
-                  <td class="cart-general__cart-block1__table__tr__td2">
-                    x
-                    <input id="dyagil1" type="number" data-price="754" class="cart-general__cart-block1__table__imput" value=""> <span>по 754руб.</span>
-                  </td>
-                  <td class="cart-general__cart-block1__table__tr__td3">
-                    x
-                    <input id="dyagil2" type="number" data-price="1218" class="cart-general__cart-block1__table__imput"> <span>по 1218руб.</span>
-                  </td>
-                  <td class="cart-general__cart-block1__table__tr__td4">
-                    x
-                    <input id="dyagil3" type="number" data-price="2786" class="cart-general__cart-block1__table__imput"> <span>по 2786руб.</span>
-                  </td>
-                  <td class="cart-general__cart-block1__table__tr__td5">
-                    <img class="active-elevent _clear_cart_line" src="img/close_cart.png" alt="">
-                  </td>
-                </tr>
+
+                <?php $postes = get_field('products'); if( $postes ): ?>
+                  <?php foreach( $postes as $p ): ?>
+                    <tr class="cart-general__cart-block1__table__tr">
+                      <td class="cart-general__cart-block1__table__tr__td1"><span><?php echo get_the_title( $p->ID ); ?>, <?php the_field('weight', $p->ID); ?> gr</span></td>
+                      <td class="cart-general__cart-block1__table__tr__td2">x
+                        <input id="product-<?php echo $p->ID; ?>_1" type="number" data-price="<?php the_field('price', $p->ID); ?>" class="cart-general__cart-block1__table__imput" value=""> <span>по <?php the_field('price', $p->ID); ?> €</span>
+                      </td>
+                      <td class="cart-general__cart-block1__table__tr__td3">
+                        x
+                        <input id="product-<?php echo $p->ID; ?>_2" type="number" data-price="<?php the_field('price_2', $p->ID); ?>" class="cart-general__cart-block1__table__imput"> <span>по <?php the_field('price_2', $p->ID); ?> €</span>
+                      </td>
+                      <td class="cart-general__cart-block1__table__tr__td4">
+                        x
+                        <input id="product-<?php echo $p->ID; ?>_3" type="number" data-price="<?php the_field('price_3', $p->ID); ?>" class="cart-general__cart-block1__table__imput"> <span>по <?php the_field('price_3', $p->ID); ?> €</span>
+                      </td>
+                      <td class="cart-general__cart-block1__table__tr__td5">
+                        <img class="active-elevent _clear_cart_line" src="<?php echo get_template_directory_uri(); ?>/img/close_cart.png" alt="">
+                      </td>
+                    </tr>
+                  <?php endforeach; ?>
+                <?php endif; ?>
+
               </tbody>
             </table>
           </div>
@@ -92,7 +60,7 @@
                     <span class="text">Сделать уникальный набор из 3х разных сортов <br>мёда в деревянной подарочной упаковке</span>
                   </label>
                 </p>
-                <p class="_cart_summ">Сумма: <span class="_buy_summ">0 руб.</span></p>
+                <p class="_cart_summ">Сумма: <span class="_buy_summ">0 €.</span></p>
                 <p class="_cart_next cart_hidden" style="margin-right: 127px; font-family: DendaNewC;">Нажмите кнопку</p>
                 <span class="_cart_arrow cart_hidden"></span>
                 <a href="http://slovopasechnika.ru/cart#" class="_buy_next active-element">Продолжить</a>
@@ -100,13 +68,12 @@
               <div class="right">
                 <p>Как выглядит подарочная коробка</p>
                 <div class="cart-general__cart-result-img-block">
-                  <div class="thumb"><img src="img/cart_img_small1.png" data-large_photo="/img/fotos/bigg.jpg" alt="">
+                  <div class="thumb"><img src="<?php echo get_template_directory_uri(); ?>/img/cart_img_small1.png" data-large_photo="<?php echo get_template_directory_uri(); ?>/img/fotos/bigg.jpg" alt="">
                     <div class="state-icon"></div>
                   </div>
-                  <div class="thumb"><img src="img/cart_img_small3.png" data-large_photo="/img/fotos/IMG_4442_2с.jpg" alt="">
+                  <div class="thumb"><img src="<?php echo get_template_directory_uri(); ?>/img/cart_img_small3.png" data-large_photo="<?php echo get_template_directory_uri(); ?>/img/fotos/IMG_4442_2с.jpg" alt="">
                     <div class="state-icon"></div>
                   </div>
-                  <!-- <img src="img/cart_img_small2.png" alt=""> -->
                 </div>
               </div>
             </div>
@@ -133,7 +100,7 @@
               </div>
             </div>
             <div class="cart-general__cart-block3-finish">
-              <a class="_finish_buy" href="http://slovopasechnika.ru/cart#">Завершить</a>
+              <a class="_finish_buy" href="#">Завершить</a>
             </div>
           </div>
         </div>

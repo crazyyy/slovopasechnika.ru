@@ -54,91 +54,80 @@
     </div>
     <div class="call-me__button"><a class="active-element _wooden_call" href="#">Отправить</a></div>
   </div>
-  <div class="modal-window" id="delivery" style="display: none;">
-    <div class="opt-general">
-      <div class="opt-general__opt-detail">
-        <p class="opt-general__opt-detail__p1">Осуществляется по всем городам России, странам СНГ и Европы.</p>
-        <ul class="opt-general__opt-detail__sell">
-          <li><span>1. </span>Курьером до Вашего адреса.</li>
-          <li><span>2. </span>До пункта выдачи в Вашем городе.</li>
-          <li><span>3. </span>Пункт самовывоза в городе Санкт-Петербург.</li>
-        </ul>
-        <p class="opt-general__opt-detail__p2">по адресу ул. Гельсингфорсская дом 3. Станция метро Лесная<br> Офис находится на территории завода «Красная Нить»
-        </p>
-        <span class="opt-general__opt-detail__line" style="margin-bottom: 8px;"></span>
-        <div class="opt-general__opt-detail__central-content">
-          <div class="opt-general__opt-detail__central-content-left">
-            <p>Остались вопросы?</p>
-            <p>Задай их менеджеру</p>
-          </div>
-          <div class="opt-general__opt-detail__central-content-right">
-            <p>+7(812)407-11-43</p>
-            <a class="active-element opt-general__opt-detail__central-content-right__active-element" href="#" data-modal="call-me" onclick="jmodal:close">Заказать обратный звонок</a>
-          </div>
-        </div>
-        <span class="opt-general__opt-detail__line" style="margin-bottom: 0; margin-top: 18px;"></span>
-      </div>
-    </div>
-  </div>
-  <div class="modal-window" id="opt" style="display: none;">
-    <div class="opt-general">
-      <div class="opt-general__opt-detail">
-        <ul class="opt-general__opt-detail__sell">
-          <li><span>1. </span>Оптовая продажа</li>
-          <li><span>2. </span>Корпоративные подарки (брендирование продукции)</li>
-          <li><span>3. </span>СТМ (собственная торговая марка)</li>
-          <li><span>4. </span>Продажа пустой продукции восковых баночек из воска BePack</li>
-        </ul>
-        <span class="opt-general__opt-detail__line"></span>
-        <p class="opt-general__opt-detail__p1">
-          Для того чтобы ознакомиться с продукцией, получить коммерческое предложение, ознакомиться с ценами, сроками изготовления, условиями поставок и прочей информацией,
-        </p>
-        <p class="opt-general__opt-detail__p2">
-          чувствуйте себя свободными в том, чтобы связяться с нами.
-        </p>
-        <p class="opt-general__opt-detail__p3">
-          Напишите запрос письма на адрес:
-          <br>
-          <span>zakaz@slovopasechnika.ru</span> с темой письма «Хочу с вами работать»
-        </p>
-        <span class="opt-general__opt-detail__line" style="margin-bottom: 8px;"></span>
-        <div class="opt-general__opt-detail__central-content">
-          <div class="opt-general__opt-detail__central-content-left">
-            <p>Остались вопросы?</p>
-            <p>Задай их менеджеру</p>
-          </div>
-          <div class="opt-general__opt-detail__central-content-right">
-            <p>+7(812)407-11-43</p>
-            <a class="active-element opt-general__opt-detail__central-content-right__active-element" href="#" data-modal="call-me" onclick="jmodal:close">Заказать обратный звонок</a>
-          </div>
-        </div>
-        <span class="opt-general__opt-detail__line" style="margin-bottom: 0; margin-top: 18px;"></span>
-      </div>
-    </div>
-  </div>
 
-  <div class="modal-window" id="contacts" style="display: none;">
-    <div class="opt-general">
-      <div class="opt-general__opt-detail">
-        <p class="opt-general__opt-detail__p1">
-          zakaz@slovopasechnika.ru
-          <br> Санкт-Петербург, Гельсингфорсская, 3
-        </p>
-        <span class="opt-general__opt-detail__line" style="margin-bottom: 8px;"></span>
-        <div class="opt-general__opt-detail__central-content">
-          <div class="opt-general__opt-detail__central-content-left">
-            <p>Остались вопросы?</p>
-            <p>Задай их менеджеру</p>
+  <?php query_posts("page_id=26"); ?>
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <div class="modal-window" id="delivery" style="display: none;">
+      <div class="opt-general">
+        <div class="opt-general__opt-detail">
+          <?php the_content(); ?>
+          <span class="opt-general__opt-detail__line" style="margin-bottom: 8px;"></span>
+          <div class="opt-general__opt-detail__central-content">
+            <div class="opt-general__opt-detail__central-content-left">
+              <p>Остались вопросы?</p>
+              <p>Задай их менеджеру</p>
+            </div>
+            <div class="opt-general__opt-detail__central-content-right">
+              <p>+7(812)407-11-43</p>
+              <a class="active-element opt-general__opt-detail__central-content-right__active-element" href="#" data-modal="call-me" onclick="jmodal:close">Заказать обратный звонок</a>
+            </div>
           </div>
-          <div class="opt-general__opt-detail__central-content-right">
-            <p>+7(812)407-11-43</p>
-            <a class="active-element opt-general__opt-detail__central-content-right__active-element" href="#" data-modal="call-me" onclick="jmodal:close">Заказать обратный звонок</a>
-          </div>
+          <span class="opt-general__opt-detail__line" style="margin-bottom: 0; margin-top: 18px;"></span>
         </div>
-        <span class="opt-general__opt-detail__line" style="margin-bottom: 0; margin-top: 18px;"></span>
       </div>
     </div>
-  </div>
+  <?php endwhile; endif; ?>
+  <?php wp_reset_query(); ?>
+
+  <?php query_posts("page_id=23"); ?>
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <div class="modal-window" id="opt" style="display: none;">
+      <div class="opt-general">
+        <div class="opt-general__opt-detail">
+          <?php the_content(); ?>
+          <span class="opt-general__opt-detail__line" style="margin-bottom: 8px;"></span>
+          <div class="opt-general__opt-detail__central-content">
+            <div class="opt-general__opt-detail__central-content-left">
+              <p>Остались вопросы?</p>
+              <p>Задай их менеджеру</p>
+            </div>
+            <div class="opt-general__opt-detail__central-content-right">
+              <p>+7(812)407-11-43</p>
+              <a class="active-element opt-general__opt-detail__central-content-right__active-element" href="#" data-modal="call-me" onclick="jmodal:close">Заказать обратный звонок</a>
+            </div>
+          </div>
+          <span class="opt-general__opt-detail__line" style="margin-bottom: 0; margin-top: 18px;"></span>
+        </div>
+      </div>
+    </div>
+  <?php endwhile; endif; ?>
+  <?php wp_reset_query(); ?>
+
+  <?php query_posts("page_id=25"); ?>
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <div class="modal-window" id="contacts" style="display: none;">
+      <div class="opt-general">
+        <div class="opt-general__opt-detail">
+          <?php the_content(); ?>
+          <span class="opt-general__opt-detail__line" style="margin-bottom: 8px;"></span>
+          <div class="opt-general__opt-detail__central-content">
+            <div class="opt-general__opt-detail__central-content-left">
+              <p>Остались вопросы?</p>
+              <p>Задай их менеджеру</p>
+            </div>
+            <div class="opt-general__opt-detail__central-content-right">
+              <p>+7(812)407-11-43</p>
+              <a class="active-element opt-general__opt-detail__central-content-right__active-element" href="#" data-modal="call-me" onclick="jmodal:close">Заказать обратный звонок</a>
+            </div>
+          </div>
+          <span class="opt-general__opt-detail__line" style="margin-bottom: 0; margin-top: 18px;"></span>
+        </div>
+      </div>
+    </div>
+  <?php endwhile; endif; ?>
+  <?php wp_reset_query(); ?>
+
+
   <div class="modal-window" id="call-me" style="display: none;">
     <p class="call-me__title">Заказать обратный звонок</p>
     <div class="call-me__phone-block">
@@ -154,9 +143,15 @@
 
       <div class="modal-window" id="product-<?php echo $thisID; ?>" style="display: none;">
         <div class="altay-detail__left-colunm">
-          <div class="altay-detail__left-colunm__big-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/detail1_big.jpg" alt="">
-          </div>
+
+          <?php $i = 0; if( have_rows('gallery', $thisID) ): while ( have_rows('gallery', $thisID ) ) : the_row(); $image = get_sub_field('image'); if( !empty($image) ): ?>
+              <?php if ( $i == 0 ) { ?>
+                <div class="altay-detail__left-colunm__big-img">
+                  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                </div>
+              <?php } ?>
+          <?php endif; $i++; endwhile; endif; ?>
+
           <div class="altay-detail__left-colunm__small-img">
             <?php if( have_rows('gallery', $thisID) ): while ( have_rows('gallery', $thisID ) ) : the_row(); ?>
               <?php $image = get_sub_field('image'); if( !empty($image) ): ?>
