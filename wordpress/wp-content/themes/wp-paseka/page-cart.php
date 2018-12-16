@@ -30,15 +30,15 @@
                     <tr class="cart-general__cart-block1__table__tr">
                       <td class="cart-general__cart-block1__table__tr__td1"><span><?php echo get_the_title( $p->ID ); ?>, <?php the_field('weight', $p->ID); ?> gr</span></td>
                       <td class="cart-general__cart-block1__table__tr__td2">x
-                        <input id="product-<?php echo $p->ID; ?>_1" type="number" data-price="<?php the_field('price', $p->ID); ?>" class="cart-general__cart-block1__table__imput" value=""> <span>по <?php the_field('price', $p->ID); ?> €</span>
+                        <input id="product-<?php echo $p->ID; ?>_1" type="number" data-price="<?php the_field('price', $p->ID); ?>" data-name="<?php echo get_the_title( $p->ID ); ?> (Без коробки)" class="cart-general__cart-block1__table__imput" value=""> <span>по <?php the_field('price', $p->ID); ?> €</span>
                       </td>
                       <td class="cart-general__cart-block1__table__tr__td3">
                         x
-                        <input id="product-<?php echo $p->ID; ?>_2" type="number" data-price="<?php the_field('price_2', $p->ID); ?>" class="cart-general__cart-block1__table__imput"> <span>по <?php the_field('price_2', $p->ID); ?> €</span>
+                        <input id="product-<?php echo $p->ID; ?>_2" type="number" data-price="<?php the_field('price_2', $p->ID); ?>" data-name="<?php echo get_the_title( $p->ID ); ?> (По 1 в коробке)" class="cart-general__cart-block1__table__imput"> <span>по <?php the_field('price_2', $p->ID); ?> €</span>
                       </td>
                       <td class="cart-general__cart-block1__table__tr__td4">
                         x
-                        <input id="product-<?php echo $p->ID; ?>_3" type="number" data-price="<?php the_field('price_3', $p->ID); ?>" class="cart-general__cart-block1__table__imput"> <span>по <?php the_field('price_3', $p->ID); ?> €</span>
+                        <input id="product-<?php echo $p->ID; ?>_3" type="number" data-price="<?php the_field('price_3', $p->ID); ?>" data-name="<?php echo get_the_title( $p->ID ); ?> (По 3 в коробке)" class="cart-general__cart-block1__table__imput"> <span>по <?php the_field('price_3', $p->ID); ?> €</span>
                       </td>
                       <td class="cart-general__cart-block1__table__tr__td5">
                         <img class="active-elevent _clear_cart_line" src="<?php echo get_template_directory_uri(); ?>/img/close_cart.png" alt="">
@@ -63,46 +63,26 @@
                 <p class="_cart_summ">Сумма: <span class="_buy_summ">0 €.</span></p>
                 <p class="_cart_next cart_hidden" style="margin-right: 127px; font-family: DendaNewC;">Нажмите кнопку</p>
                 <span class="_cart_arrow cart_hidden"></span>
-                <a href="http://slovopasechnika.ru/cart#" class="_buy_next active-element">Продолжить</a>
+                <a href="#" class="_buy_next active-element">Продолжить</a>
               </div>
               <div class="right">
                 <p>Как выглядит подарочная коробка</p>
                 <div class="cart-general__cart-result-img-block">
-                  <div class="thumb"><img src="<?php echo get_template_directory_uri(); ?>/img/cart_img_small1.png" data-large_photo="<?php echo get_template_directory_uri(); ?>/img/fotos/bigg.jpg" alt="">
-                    <div class="state-icon"></div>
-                  </div>
-                  <div class="thumb"><img src="<?php echo get_template_directory_uri(); ?>/img/cart_img_small3.png" data-large_photo="<?php echo get_template_directory_uri(); ?>/img/fotos/IMG_4442_2с.jpg" alt="">
-                    <div class="state-icon"></div>
-                  </div>
+
+                <?php if( have_rows('preview') ): while ( have_rows('preview') ) : the_row(); ?>
+                  <?php $image = get_sub_field('image'); if( !empty($image) ): ?>
+                    <div class="thumb">
+                      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" data-large_photo="<?php echo $image['url']; ?>" />
+                      <div class="state-icon"></div>
+                    </div>
+                  <?php endif; ?>
+                <?php endwhile; endif; ?>
+
                 </div>
               </div>
             </div>
           </div>
-          <div class="cart-general__cart-block2">
-            <div class="cart-general__cart-block2-tel">
-              <input class="_finish_tel" placeholder=" контактный телефон" type="text">
-            </div>
-            <div class="cart-general__cart-block2-email">
-              <input class="_finish_email" placeholder=" e-mail" type="text">
-            </div>
-          </div>
-          <div class="cart-general__cart-block3">
-            <div class="cart-general__cart-block3__checkbox">
-              <div class="cart-general__cart-block3__checkbox-first">
-                <label for="first">доставка в пункт выдачи в Вашем городe </label>
-                <input type="checkbox" class="checkbox" id="first">
-              </div>
-              <div class="cart-general__cart-block3__checkbox-second">
-                <label for="second">доставка курьером по вашему адресу </label>
-                <label for="second">
-                  <input type="checkbox" class="checkbox" id="second">
-                </label>
-              </div>
-            </div>
-            <div class="cart-general__cart-block3-finish">
-              <a class="_finish_buy" href="#">Завершить</a>
-            </div>
-          </div>
+          <?php echo do_shortcode('[contact-form-7 id="29" title="BuyForm"]'); ?>
         </div>
       </div>
     </div>

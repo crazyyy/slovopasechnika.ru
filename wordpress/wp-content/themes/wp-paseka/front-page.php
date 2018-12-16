@@ -122,7 +122,7 @@
                 </div>
                 <div class="proposion-item-block-buttons">
                   <a href="#" data-modal="product-<?php echo $p->ID; ?>" class="detail active-element">Подробнее</a>
-                  <a href="<?php echo home_url(); ?>/cart.htm/product-<?php echo $p->ID; ?>" class="buy active-element">Купить</a>
+                  <a href="<?php echo home_url(); ?>/cart.htm" class="buy active-element">Купить</a>
                 </div>
               </div>
             <?php endforeach; ?>

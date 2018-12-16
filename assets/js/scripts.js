@@ -34,8 +34,6 @@ $(document).ready(function() {
   });
 })
 
-
-
 /** OWL carousel */
 "function" !== typeof Object.create && (Object.create = function(f) {
   function g() {}
@@ -1942,6 +1940,7 @@ $(document).on('change', '#second', function() {
 });
 
 $(document).on('click', '._finish_buy', function() {
+
   if ($('._finish_tel').val() == '') {
     alert('Необходимо указать номер телефона');
     return false;
@@ -1957,58 +1956,27 @@ $(document).on('click', '._finish_buy', function() {
   }
 
 
-  items = '{';
+  items = '';
   if ($('#first').prop('checked') == true) {
-    items += '"dost":"1"';
+    items += 'доставка в пункт выдачи в Вашем городe \n';
   }
 
   if ($('#second').prop('checked') == true) {
-    items += '"dost":"2"';
+    items += 'доставка курьером по вашему адресу \n';
   }
 
   $('.cart-general__cart-block1__table input').each(function() {
     if ($(this).val() != '') {
-      items += ', "' + $(this).attr('id') + '":"' + $(this).val() + '"';
+      items += '' + $(this).attr('data-name') + ' : ' + $(this).val() + ' \n';
     }
   });
 
   if ($('#i-wonna-gift').prop('checked') == true) {
-    items += ',"special":"1"';
+    items += 'Выбрано: Сделать уникальный набор из 3х разных сортов мёда в деревянной подарочной упаковке\n';
   }
 
-  items += '}';
+  items += '';
+  $('.your-message textarea').val(items);
   console.log(items);
-  $.ajax({
-    type: 'GET',
-    url: '/sendData',
-    data: {
-      data: $.parseJSON(items),
-      type: 'cart',
-      phone: $('._finish_tel').val(),
-      email: $('._finish_email').val()
-    },
-    success: function(response) {
-      //            alert('Спасибо за заказ. Наш менеджер свяжется с вами в ближайшее время.');
-      $('#thanks').jmodal();
-      $('.cart-general__cart-block1__table').find('input').val('');
-      $('._buy_summ').text('0 €.');
-      $('._cart_summ').show();
-      $('._cart_next').hide();
-      $('._cart_arrow').hide();
-      $('.cart-general__cart-block1').show();
-      $('.cart-general__cart-result-wrapper').show();
-      $('.cart-general__cart-block2').hide();
-      $('.cart-general__cart-block3').hide();
-      $('#special-cart').prop('checked', false);
-      $('#first').prop('checked', false);
-      $('#second').prop('checked', false);
-      $('._finish_tel').val('');
-      $('._finish_email').val('');
-    },
-    error: function(jqXHR) {
-      alert(jqXHR.responseText);
-    }
-  });
-  return false;
 });
 /** end cart  */

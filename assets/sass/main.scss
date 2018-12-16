@@ -4,3 +4,41 @@
 @import 'import/jquery.jmodal';
 @import 'import/jquery-photo-enlarger';
 @import 'import/fonts';
+
+@media screen and (min-width: 1190px) {
+  .altay-detail__left-colunm__small-img {
+    div {
+      float: left;
+
+      width: 75px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cart-general__cart-block3-finish a,
+  .cart-general__cart-block3-finish input[type=submit] {
+    font-size: 21px;
+
+    display: inline-block;
+
+    width: 200px;
+    padding: 9px;
+
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+
+    color: #fff;
+    border-radius: 11px;
+    outline: none;
+    background-color: #d7e269;
+    box-shadow: none;
+  }
+}
+
+.cart-general__cart-block3-finish {
+  .your-message {
+    display: none;
+  }
+}
